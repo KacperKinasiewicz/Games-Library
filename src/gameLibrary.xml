@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="gameLibrary.css"?>
+<!DOCTYPE document [
+<!ENTITY lastModified "2024-11-24">
+<!ENTITY defaultGenre "Action RPG">
+
+<!ELEMENT document (metadata, gameLibrary)>
+    <!ELEMENT metadata (author, lastModified, creationDate, description?)>
+        <!ELEMENT author (name, index, email)>
+            <!ELEMENT name (#PCDATA)>
+            <!ELEMENT index (#PCDATA)>
+            <!ELEMENT email (#PCDATA)>
+        <!ELEMENT lastModified (#PCDATA)>
+        <!ELEMENT creationDate (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+    <!ELEMENT gameLibrary (games, developers)>
+        <!ELEMENT games (header, game+)>
+            <!ELEMENT header (#PCDATA)>
+            <!ELEMENT game (title, genre, publicationDate, price?, rating?, developerRef)>
+            <!ATTLIST game id ID #REQUIRED>
+            <!ATTLIST game genre (rpg | fps | action | strategy | simulator) #REQUIRED>
+            <!ELEMENT title (#PCDATA)>
+            <!ELEMENT genre (#PCDATA)>
+            <!ELEMENT publicationDate (#PCDATA)>
+            <!ELEMENT price (#PCDATA)>
+            <!ATTLIST price currency (PLN | USD | EUR) #REQUIRED>
+            <!ELEMENT rating (#PCDATA)>
+            <!ELEMENT developerRef EMPTY>
+            <!ATTLIST developerRef devId IDREF #REQUIRED>
+        <!ELEMENT developers (header, developer+)>
+            <!ELEMENT developer (name, country, address?)>
+            <!ATTLIST developer id ID #REQUIRED>
+            <!ELEMENT country (#PCDATA)>
+            <!ELEMENT address (city, street, zipCode)>
+                <!ELEMENT city (#PCDATA)>
+                <!ELEMENT street (#PCDATA)>
+                <!ELEMENT zipCode (#PCDATA)>
+]>
+
+<document>
+    <metadata>
+        <author>
+            <name>Kacper Kinasiewicz</name>
+            <index>251550</index>
+            <email>251550@edu.p.lodz.pl</email>
+        </author>
+        <lastModified>&lastModified;</lastModified>
+        <creationDate>2024-11-23</creationDate>
+        <description>This XML document contains a list of games available in the game library. Each game has its own unique ID, title, genre, developer, publication date, price, and rating. The document also contains a list of developers with their unique IDs, names, countries, and addresses.</description>
+    </metadata>
+    <gameLibrary>
+        <games>
+            <header>Games</header>
+            <game id="g1" genre="rpg">
+                <title>Cyberpunk 2077</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2020-12-10</publicationDate>
+                <price currency="PLN">199,00</price>
+                <rating>86</rating>
+                <developerRef devId="d1"/>
+            </game>
+            <game id="g2" genre="action">
+                <title>Grand Theft Auto V</title>
+                <genre>Open-World Action</genre>
+                <publicationDate>2014-11-18</publicationDate>
+                <price currency="USD">29,98</price>
+                <rating>97</rating>
+                <developerRef devId="d2"/>
+            </game>
+            <game id="g3" genre="fps">
+                <title>Battlefield 4</title>
+                <genre>First-Person Shooter</genre>
+                <publicationDate>2013-10-19</publicationDate>
+                <price currency="EUR">39,99</price>
+                <rating>81</rating>
+                <developerRef devId="d3"/>
+            </game>
+            <game id="g4" genre="fps">
+                <title>Far Cry 4</title>
+                <genre>First-Person Shooter</genre>
+                <publicationDate>2014-11-18</publicationDate>
+                <price currency="EUR">29,99</price>
+                <rating>85</rating>
+                <developerRef devId="d4"/>
+            </game>
+            <game id="g5" genre="rpg">
+                <title>The Witcher 3: Wild Hunt</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2015-05-19</publicationDate>
+                <price currency="PLN">99,99</price>
+                <rating>92</rating>
+                <developerRef devId="d1"/>
+            </game>
+            <game id="g6" genre="rpg">
+                <title>The Elder Scrolls V: Skyrim</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2011-11-11</publicationDate>
+                <price currency="EUR">14,99</price>
+                <rating>94</rating>
+                <developerRef devId="d5"/>
+            </game>
+            <game id="g7" genre="fps">
+                <title>Medal of Honor</title>
+                <genre>First-Person Shooter</genre>
+                <publicationDate>2010-10-12</publicationDate>
+                <price currency="EUR">19,99</price>
+                <rating>75</rating>
+                <developerRef devId="d3"/>
+            </game>
+            <game id="g8" genre="fps">
+                <title>Max Payne 3</title>
+                <genre>Third-Person Shooter</genre>
+                <publicationDate>2012-05-15</publicationDate>
+                <price currency="USD">19,99</price>
+                <rating>87</rating>
+                <developerRef devId="d2"/>
+            </game>
+            <game id="g9" genre="rpg">
+                <title>Fallout 3</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2008-10-28</publicationDate>
+                <price currency="EUR">9,99</price>
+                <rating>91</rating>
+                <developerRef devId="d5"/>
+            </game>
+            <game id="g10" genre="simulator">
+                <title>The Sims 4</title>
+                <genre>Life Simulation</genre>
+                <publicationDate>2014-09-02</publicationDate>
+                <price currency="USD">0</price>
+                <rating>70</rating>
+                <developerRef devId="d6"/>
+            </game>
+            <game id="g11" genre="strategy">
+                <title>SpellForce: The Order of Dawn</title>
+                <genre>Real-Time Strategy</genre>
+                <publicationDate>2003-11-11</publicationDate>
+                <price currency="PLN">29,99</price>
+                <rating>75</rating>
+                <developerRef devId="d7"/>
+            </game>
+            <game id="g12" genre="strategy">
+                <title>Heroes of Might and Magic III</title>
+                <genre>Turn-Based Strategy</genre>
+                <publicationDate>1999-02-28</publicationDate>
+                <price currency="PLN">39,49</price>
+                <rating>86</rating>
+                <developerRef devId="d8"/>
+            </game>
+            <game id="g13" genre="rpg">
+                <title>Gothic 1</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2001-03-15</publicationDate>
+                <price currency="PLN">39,99</price>
+                <rating>81</rating>
+                <developerRef devId="d9"/>
+            </game>
+            <game id="g14" genre="action">
+                <title>Assassin's Creed III</title>
+                <genre>Action-Adventure</genre>
+                <publicationDate>2012-10-30</publicationDate>
+                <price currency="EUR">4,99</price>
+                <rating>84</rating>
+                <developerRef devId="d4"/>
+            </game>
+            <game id="g15" genre="action">
+                <title>Dying Light</title>
+                <genre>Survival Horror</genre>
+                <publicationDate>2015-01-27</publicationDate>
+                <price currency="PLN">59,99</price>
+                <rating>74</rating>
+                <developerRef devId="d10"/>
+            </game>
+            <game id="g16" genre="simulator">
+                <title>FIFA 20</title>
+                <genre>Sports</genre>
+                <publicationDate>2019-09-27</publicationDate>
+                <price currency="PLN">199,99</price>
+                <rating>79</rating>
+                <developerRef devId="d6"/>
+            </game>
+            <game id="g17" genre="action">
+                <title>Mafia II</title>
+                <genre>Action-Adventure</genre>
+                <publicationDate>2010-08-24</publicationDate>
+                <price currency="USD">29,99</price>
+                <rating>77</rating>
+                <developerRef devId="d11"/>
+            </game>
+            <game id="g18" genre="action">
+                <title>Red Dead Redemption 2</title>
+                <genre>Open-World Action</genre>
+                <publicationDate>2018-10-26</publicationDate>
+                <price currency="USD">59,99</price>
+                <rating>97</rating>
+                <developerRef devId="d2"/>
+            </game>
+            <game id="g19" genre="rpg">
+                <title>Starfield</title>
+                <genre>&defaultGenre;</genre>
+                <publicationDate>2022-11-11</publicationDate>
+                <price currency="EUR">69,99</price>
+                <rating>83</rating>
+                <developerRef devId="d5"/>
+            </game>
+            <game id="g20" genre="simulator">
+                <title>Forza Horizon 4</title>
+                <genre>Racing</genre>
+                <publicationDate>2018-10-02</publicationDate>
+                <price currency="EUR">69,99</price>
+                <rating>92</rating>
+                <developerRef devId="d6"/>
+            </game>
+        </games>
+        <developers>
+            <header>Developers</header>
+            <developer id="d1">
+                <name>CD Projekt RED</name>
+                <country>Poland</country>
+                <address>
+                    <city>Warsaw</city>
+                    <street>ul. Jagiellońska 74</street>
+                    <zipCode>03-301</zipCode>
+                </address>
+            </developer>
+            <developer id="d2">
+                <name>Rockstar North</name>
+                <country>United Kingdom</country>
+                <address>
+                    <city>Edinburgh</city>
+                    <street>Waterfront</street>
+                    <zipCode>EH5 1-7</zipCode>
+                </address>
+            </developer>
+            <developer id="d3">
+                <name>DICE</name>
+                <country>Sweden</country>
+                <address>
+                    <city>Stockholm</city>
+                    <street>Östgötagatan 100</street>
+                    <zipCode>116 25</zipCode>
+                </address>
+            </developer>
+            <developer id="d4">
+                <name>Ubisoft Montreal</name>
+                <country>Canada</country>
+                <address>
+                    <city>Montreal</city>
+                    <street>5505 St-Laurent Blvd</street>
+                    <zipCode>H2T 1S6</zipCode>
+                </address>
+            </developer>
+            <developer id="d5">
+                <name>Bethesda Game Studios</name>
+                <country>United States</country>
+                <address>
+                    <city>Rockville</city>
+                    <street>1370 Piccard Dr</street>
+                    <zipCode>20850</zipCode>
+                </address>
+            </developer>
+            <developer id="d6">
+                <name>Electronic Arts</name>
+                <country>United States</country>
+                <address>
+                    <city>Redwood City</city>
+                    <street>209 Redwood Shores Pkwy</street>
+                    <zipCode>94065</zipCode>
+                </address>
+            </developer>
+            <developer id="d7">
+                <name>Phenomic Game Development</name>
+                <country>Germany</country>
+                <address>
+                    <city>Ingelheim am Rhein</city>
+                    <street>Am Rheinufer 1</street>
+                    <zipCode>55218</zipCode>
+                </address>
+            </developer>
+            <developer id="d8">
+                <name>New World Computing</name>
+                <country>United States</country>
+                <address>
+                    <city>Agoura Hills</city>
+                    <street>30448 Agoura Rd</street>
+                    <zipCode>91301</zipCode>
+                </address>
+            </developer>
+            <developer id="d9">
+                <name>Piranha Bytes</name>
+                <country>Germany</country>
+                <address>
+                    <city>Essen</city>
+                    <street>Am Zehnthof 77</street>
+                    <zipCode>45307</zipCode>
+                </address>
+            </developer>
+            <developer id="d10">
+                <name>Techland</name>
+                <country>Poland</country>
+                <address>
+                    <city>Wrocław</city>
+                    <street>ul. Jana Pawła II 50</street>
+                    <zipCode>50-136</zipCode>
+                </address>
+            </developer>
+            <developer id="d11">
+                <name>2K Czech</name>
+                <country>Czech Republic</country>
+            </developer>
+        </developers>
+    </gameLibrary>
+</document>
